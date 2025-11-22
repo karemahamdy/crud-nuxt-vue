@@ -1,5 +1,6 @@
     // tailwind.config.js
     module.exports = {
+        darkMode: false, 
       content: [
         "./app/**/*.{js,vue,ts}",
         "./components/**/*.{js,vue,ts}",
