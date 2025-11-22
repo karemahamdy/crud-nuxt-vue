@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-4xl mx-auto py-10 px-4 bg-white shadow-md rounded-md flex flex-col justify-center items-center mt-40">
-    <h1 class="text-3xl font-bold mb-6 text-center ">Nuxt 3 CRUD — Tailwind + PrimeVue</h1>
+    <h1 class="text-3xl font-bold mb-6 text-center bg-red-400 p-4">fully operation crud</h1>
 
     <ItemForm @add="addItem" />
 

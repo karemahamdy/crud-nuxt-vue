@@ -1,5 +1,5 @@
 <template>
-  <DataTable :value="items" class="shadow-lg rounded-xl">
+  <DataTable :value="items" class="shadow-lg rounded-md w-full">
     <Column field="id" header="ID" />
     <Column field="name" header="Name" />
     <Column field="description" header="Description" />

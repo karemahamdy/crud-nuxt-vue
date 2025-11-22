@@ -4,10 +4,13 @@ import Aura from '@primeuix/themes/aura';
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@primevue/nuxt-module', 
+  ],
   
   css: [
-    '@/assets/css/tailwind.css',
+    '~/assets/css/tailwind.css',
   ],
   
   primevue: {
@@ -19,4 +22,10 @@ export default defineNuxtConfig({
     },
     autoImport: true // This will auto-import components
   },
+    app: {
+    head: {
+      link: []
+    }
+  }
+
 })
