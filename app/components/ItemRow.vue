@@ -1,13 +1,9 @@
 <template>
-  <tr>
-    <td>{{ item.id }}</td>
-    <td>{{ item.name }}</td>
-    <td>{{ item.description }}</td>
-
-    <td class="flex gap-2">
+  <div class="flex items-center">
+    <div class="flex gap-2">
       <Button label="Edit" size="small" @click="startEdit" />
       <Button label="Delete" size="small" severity="danger" @click="emit('delete', item.id)" />
-    </td>
+    </div>
 
     <!-- Edit Dialog -->
     <Dialog v-model:visible="visible" header="Edit Item" :modal="true">
@@ -17,7 +13,7 @@
         <Button label="Save" @click="save" />
       </div>
     </Dialog>
-  </tr>
+  </div>
 </template>
 
 <script setup>

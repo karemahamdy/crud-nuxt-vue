@@ -7,8 +7,8 @@
       <template #body="slotProps">
         <ItemRow
           :item="slotProps.data"
-          @update="emit('update', $event[0], $event[1])"
-          @delete="emit('delete', $event)"
+          @update="(id, payload) => emit('update', id, payload)"
+          @delete="(id) => emit('delete', id)"
         />
       </template>
     </Column>
