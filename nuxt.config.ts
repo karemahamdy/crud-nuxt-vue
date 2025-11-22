@@ -1,11 +1,22 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// nuxt.config.ts
+import { defineNuxtConfig } from 'nuxt/config'
+import Aura from '@primeuix/themes/aura';
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
-   css: ['@/assets/css/tailwind.css'],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
+  modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss'],
+  
+  css: [
+    '@/assets/css/tailwind.css',
+  ],
+  
+  primevue: {
+    options: {
+      theme: {
+        preset: Aura
+      },
+      ripple: true
     },
+    autoImport: true // This will auto-import components
   },
 })
